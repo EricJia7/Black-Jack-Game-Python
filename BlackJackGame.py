@@ -28,7 +28,6 @@ class Player(object):
     def hit(self):
         return raw_input("Would you like to hit? Enter yes or no: \n").lower().startswith('y')
 
-
 from random import shuffle 
 
 class Cards(object): 
@@ -39,11 +38,7 @@ class Cards(object):
         
     def shuffle(self):
         shuffle(self.original_card)
-    
-  #  def pullcard(self):
-   #     return self.original_card[0]
-    #    del self.original_card[0]
-    
+
     def pullcard(self):
         card_receive = self.original_card[0]
         value = 0
@@ -60,7 +55,6 @@ class Cards(object):
         self.original_card = range(1,15 )* 4
         del self.original_card[55]
         del self.original_card[41]
-
 
 def display(card_display = []):
     
@@ -80,7 +74,6 @@ def display(card_display = []):
         card_display_str = str(card_display)
     
     return card_display_str
-
 
 class Bank(object):
     def __init__(self,amount = 0):
@@ -113,7 +106,6 @@ def print_player_card(card):
     
 def print_dealer_card(card):
     print "Dealer cards on hand are: ", card
-
 
 def playgame():
     
@@ -274,8 +266,6 @@ def playgame():
                                 print "Player currentt bankroll is: ", player_1.show_bankroll()
                                 money.bank_reset()
                                 break
-                
-              #  break
                 
                 if control > 0:
                     
